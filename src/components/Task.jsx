@@ -29,15 +29,15 @@ export default function Task({
         />
       </div>
       <div className="actions" onClick={(e) => e.stopPropagation()}>
-        {state === "TASK_PINNED" && (
-          <a onClick={() => onPinTask(id)}>
-            <span
-              className="icon-star"
-              id={`pinTask-${id}`}
-              aria-label={`pinTask-${id}`}
-            />
-          </a>
-        )}
+        {/* {state === "TASK_PINNED" && ( */}
+        <a onClick={() => onPinTask(id)}>
+          <span
+            className="icon-star"
+            id={`pinTask-${id}`}
+            aria-label={`pinTask-${id}`}
+          />
+        </a>
+        {/* )} */}
       </div>
     </div>
   );

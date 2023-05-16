@@ -13,15 +13,12 @@ Default.args = {
     id: "1",
     title: "Test Task",
     state: "TASK_INBOX",
-    updatedAt: new Date(2021, 0, 1, 9, 0),
+    // updatedAt: new Date(2021, 0, 1, 9, 0),
   },
-  onArchiveTask: console.log,
-  onPinTask: console.log,
 };
 
 export const Pinned = Template.bind({});
 Pinned.args = {
-  ...Default.args,
   task: {
     ...Default.args.task,
     title: "Test Pinned Task",
@@ -31,7 +28,6 @@ Pinned.args = {
 
 export const Archived = Template.bind({});
 Archived.args = {
-  ...Default.args,
   task: {
     ...Default.args.task,
     title: "Test Archived Task",

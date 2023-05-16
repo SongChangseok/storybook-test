@@ -1,4 +1,19 @@
+import { initialize, mswDecorator } from "msw-storybook-addon";
 import "../src/index.css";
+import { withThemeFromJSXProvider } from "@storybook/addon-styling";
+import theme from "../src/theme";
+import { ThemeProvider } from "styled-components";
+
+initialize();
+
+export const decorators = [
+  mswDecorator,
+  withThemeFromJSXProvider({
+    themes: theme,
+    defaultTheme: "mint",
+    Provider: ThemeProvider,
+  }),
+];
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
